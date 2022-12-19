@@ -1,6 +1,5 @@
-import { useEffect } from 'react';
 import { createNewPlayer } from '../load';
-import playerData from '../playerData.json'
+// import playerData from '../playerData.json'
 
 const PlayerCreate = () => {
 
