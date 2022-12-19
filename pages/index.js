@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { Card, CardContent } from '@material-ui/core';
 
 
 export default function Home() {
@@ -15,41 +14,27 @@ export default function Home() {
       </Head>
       <div className={styles.main}>
         <div className='grid grid-cols-3 gap-4 w-full p-4'>
-          <Card className='catalog-card'>
-            <CardContent>
-              dummy 1
-            </CardContent>
-          </Card>
-          <Card className='catalog-card col-span-2'>
-            <CardContent>
-              dummy 2
-            </CardContent>
-          </Card>
-          <Card className='catalog-card col-span-2'>
-            <CardContent>
-              dummy 3
-            </CardContent>
-          </Card>
-          <Card className='catalog-card'>
-            <CardContent>
-              dummy 4
-            </CardContent>
-          </Card>
-          <Card className='catalog-card'>
-            <CardContent>
-              dummy 5
-            </CardContent>
-          </Card>
-          <Card className='catalog-card'>
-            <CardContent>
-              dummy 6
-            </CardContent>
-          </Card>
-          <Card className='catalog-card'>
-            <CardContent>
-              dummy 7
-            </CardContent>
-          </Card>
+          <div className='catalog-card shadow-lg bg-white rounded p-4'>
+            dummy widget
+          </div>
+          <div className='catalog-card col-span-2 shadow-lg bg-white rounded p-4'>
+            dummy widget
+          </div>
+          <div className='catalog-card col-span-2 shadow-lg bg-white rounded p-4'>
+            dummy widget
+          </div>
+          <div className='catalog-card shadow-lg bg-white rounded p-4'>
+            dummy widget
+          </div>
+          <div className='catalog-card shadow-lg bg-white rounded p-4'>
+            dummy widget
+          </div>
+          <div className='catalog-card shadow-lg bg-white rounded p-4'>
+            dummy widget
+          </div>
+          <div className='catalog-card shadow-lg bg-white rounded p-4'>
+            dummy widget
+          </div>
         </div>
       </div>
     </div>
