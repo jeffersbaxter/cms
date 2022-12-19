@@ -1,4 +1,4 @@
-import { Icon, Link } from '@aws-amplify/ui-react';
+import { Link } from '@aws-amplify/ui-react';
 import { useRouter } from 'next/router';
 import { faHome, faBook, faAddressCard, faMagnifyingGlassChart } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

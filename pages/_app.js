@@ -2,7 +2,6 @@ import Layout from '../components/layout'
 import '../styles/globals.css'
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import { ThemeProvider } from '@aws-amplify/ui-react';
 config.autoAddCss = false
 
 const theme = {
@@ -26,10 +25,8 @@ const theme = {
 
 export default function App({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={theme} colorMode="light">
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-    </ThemeProvider>
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   )
 }
