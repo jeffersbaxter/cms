@@ -4,12 +4,12 @@ import { createNewPlayer } from '../load';
 const PlayerCreate = () => {
 
     const loadPlayerData = () => {
-        playerData.map(player => {
-            createNewPlayer(player)
-                .catch(error => {
-                    console.error(error)
-                });
-        })
+        // playerData.map(player => {
+        //     createNewPlayer(player)
+        //         .catch(error => {
+        //             console.error(error)
+        //         });
+        // })
     };
 
     return (

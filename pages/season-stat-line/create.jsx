@@ -1,19 +1,11 @@
 import { useState } from 'react'
 import { createNewSeasonStatLine } from '../load'
-import playerData from '../playerData.json'
+// import playerData from '../playerData.json'
 
 const CreateSeasonalStatLine = () => {
     const [createdData, setCreatedData] = useState(false)
     const loadStatData = () => {
-        playerData.map(player => {
-            createNewSeasonStatLine(player.seasonalStatLine)
-            .catch(error => {
-                console.error(error)
-            })
-            .finally(data => {
-                setCreatedData(true);
-            })
-        })
+        // TODO: player data json with season stats
     }
     return (
         <div className='create-seasonal-stat-line container'>
