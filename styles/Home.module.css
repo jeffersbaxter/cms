@@ -1,10 +1,16 @@
 .main {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6rem;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* align-items: center;
+  padding: 6rem; */
+  flex-wrap: wrap;
   min-height: 100vh;
+}
+
+.catalog-card {
+  margin: 1.5rem;
+  width: 350px;
 }
 
 .description {
