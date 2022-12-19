@@ -2,31 +2,9 @@ import { withSSRContext } from 'aws-amplify';
 import { useEffect, useState } from 'react';
 import PlayerStats from '../../components/PlayerStats';
 import { listPlayers } from '../../src/graphql/queries';
-import { deletePlayerById, getAllPlayers, getAllSeasonStats, updatePlayerRow } from '../load';
+import { deletePlayerById, getAllPlayers, getAllSeasonStats, updatePlayerRow } from '../../utils/load';
 
 const GetSeasonalStatLines = ({ players = []}) => {
-    // const [stats, setStats] = useState([]);
-    // const [players, setPlayers] = useState([]);
-    // const [selectedPlayer, setSelectedPlayer] = useState(null);
-    // const [selectedStat, setSelectedStat] = useState(null);
-
-    // useEffect(() => {
-    //     // getAllSeasonStats()
-    //     // .then(res => {
-    //     //     setStats(res.data.listSeasonalStatLines.items);
-    //     // })
-    //     // .catch(error => {
-    //     //     console.error(error);
-    //     // })
-
-    //     getAllPlayers()
-    //     .then(({ data }) => {
-    //         setPlayers(data.listPlayers.items);
-    //     })
-    //     .catch(error => {
-    //         console.error(error);
-    //     });
-    // }, [])
 
     const connectPlayerToStats = (player, seasonalStat) => {
         player["seasonalStatLineId"] = seasonalStat.id;

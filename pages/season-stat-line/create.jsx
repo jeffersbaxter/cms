@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { createNewSeasonStatLine } from '../load'
+import { createNewSeasonStatLine } from '../../utils/load'
 // import playerData from '../playerData.json'
 
 const CreateSeasonalStatLine = () => {

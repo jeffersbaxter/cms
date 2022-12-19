@@ -1,4 +1,4 @@
-import { createNewPlayer } from '../load';
+import { createNewPlayer } from '../../utils/load';
 // import playerData from '../playerData.json'
 
 const PlayerCreate = () => {
