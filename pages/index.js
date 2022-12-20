@@ -1,8 +1,12 @@
 import { Link } from '@aws-amplify/ui-react';
-import { withSSRContext } from 'aws-amplify'
+import { Amplify, withSSRContext } from 'aws-amplify'
 import Head from 'next/head'
+import awsExport from '../src/aws-exports';
 import { listPlayers } from '../src/graphql/queries'
 import styles from '../styles/Home.module.css'
+
+
+Amplify.configure({ ...awsExport, ssr: true });
 
 
 export default function Home({
@@ -15,7 +19,6 @@ export default function Home({
   rightyPoints,
   leftyPoints
 }) {
-  console.log(rightyPoints)
   return (
     <div>
       <Head>

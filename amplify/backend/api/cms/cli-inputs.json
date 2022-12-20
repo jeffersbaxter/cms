@@ -8,6 +8,11 @@
       "expirationTime": 365,
       "apiKeyExpirationDate": "2023-12-16T05:34:52.644Z",
       "keyDescription": "krakendashboard"
-    }
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AWS_IAM"
+      }
+    ]
   }
 }
