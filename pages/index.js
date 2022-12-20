@@ -42,7 +42,7 @@ export default function Home({
               <span className='grid team-red text-2xl w-1/2 text-right'>{defensePoints}</span>
             </div>
             <span className='grid place-items-center text-sm text-teal-400 w-full'>
-              <Link href="/season-stat-line/defense">
+              <Link href="/season-stat-line">
                 see more
               </Link>
             </span>
@@ -61,7 +61,7 @@ export default function Home({
               <span className='grid team-red text-2xl w-1/2 text-right'>{forwardsPoints}</span>
             </div>
             <span className='grid place-items-center text-sm text-teal-400 w-full'>
-              <Link href="/season-stat-line/defense">
+              <Link href="/season-stat-line/forwards">
                 see more
               </Link>
             </span>
