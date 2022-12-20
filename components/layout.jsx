@@ -1,43 +1,20 @@
 import { Link } from '@aws-amplify/ui-react';
 import { useRouter } from 'next/router';
-import { faHome, faBook, faAddressCard, faMagnifyingGlassChart } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Navbar from './navbar'
+import { sideNavItems } from './nav-data';
 
 const Layout = ({ children }) => {
     const router = useRouter();
 
-    const menuItems = [
-        {
-            href: '/',
-            title: 'Home',
-            icon: faHome
-        },
-        {
-            href: '/about',
-            title: 'About',
-            icon: faBook
-        },
-        {
-            href: '/contact',
-            title: 'Contact',
-            icon: faAddressCard
-        },
-        {
-            href: '/season-stat-line',
-            title: 'Season Stats',
-            icon: faMagnifyingGlassChart
-        },
-    ];
-
     return (
         <>
             <Navbar />
-            <div className='md-blue-top-separator flex'>
-                <aside className='bg-teal-200 w-1/6 pt-2'>
-                    <nav>
+            <div className='md-blue-top-separator p-4 flex'>
+                <aside className='bg-teal-200 rounded w-1/6 pt-2 hidden lg:flex'>
+                    <nav className='w-full'>
                         <ul>
-                        {menuItems.map(({ href, title, icon }) => (
+                        {sideNavItems.map(({ href, title, icon }) => (
                             <li className='m-2' key={title}>
                             <Link 
                                 className={`flex p-2 bg-teal-200 rounded hover:away-blue-bg cursor-pointer ${
@@ -52,7 +29,7 @@ const Layout = ({ children }) => {
                         </ul>
                     </nav>
                 </aside>
-                <main className='flex-3 w-10/12'>{children}</main>
+                <main className='flex-3 w-full pl-4 pb-4 pr-4 lg:pr-0 lg:w-10/12'>{children}</main>
             </div>
         </>
     )

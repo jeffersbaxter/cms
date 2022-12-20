@@ -31,26 +31,25 @@ const PlayerStats = ({ playerStatList }) => {
         <div className='player-stats-container'>
             <h3 className='page-title text-2xl team-red'>Production per Game</h3>
             <div className='flex'>
-                <div className='player-stats-table w-2/3'>
+                <div className='player-stats-table w-full lg:w-2/3'>
                     <div className='player-card sticky top-0 z-50'>
                         <div className='bg-teal-200 shadow-lg rounded h-12 player-card-content flex'>
-                            <span className='player-profile place-items-center flex-1 font-medium text-xl'>Player</span>
-                            {/* <div className='player-stat-glance flex-1'> */}
+                            <span className='flex-1 font-medium text-xl'>
+                                <span className='block pl-4 pt-2'>
+                                    Player
+                                </span>
+                            </span>
                             <span className='flex-1 grid place-items-center font-medium text-xl'>Goals</span>
                             <span className='flex-1 grid place-items-center font-medium text-xl'>Assists</span>
                             <span className='flex-1 grid place-items-center font-medium text-xl'>Points</span>
-                            {/* </div> */}
                         </div>
                     </div>
                     <div className='shadow-lg bg-white rounded p-4'>
                         {playerStatList.map(player => (<PlayerStat key={player.id} {...player} />))}
                     </div>
                 </div>
-                <div className='player-stat-description py-10 w-1/3'>
-                    <span className='content text-white'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <div className='player-stat-description hidden lg:flex py-6 w-1/3'>
+                    <span className='content text-white'>Goals, assists and points are calculated as an average for each game. Each column is the total for that statistic - divided by the number of games played.
                     </span>
                 </div>
             </div>

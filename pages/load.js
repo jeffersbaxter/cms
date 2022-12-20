@@ -3,7 +3,7 @@ import { createPlayer, createSeasonalStatLine, updatePlayer, deletePlayer } from
 import { listSeasonalStatLines, getSeasonalStatLine, listPlayers } from './../src/graphql/queries';
 import awsExport from '../src/aws-exports';
 
-Amplify.configure({ ...awsExport, ssr: true });
+Amplify.configure({...awsExport, ssr: true});
 
 export const deletePlayerById = async (id) => {
     return await API.graphql({
