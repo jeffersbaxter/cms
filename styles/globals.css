@@ -131,6 +131,10 @@ a {
   color: white;
 }
 
+.col-3-widget {
+  width: calc(33% - .3rem);
+}
+
 .player-stat-header {
   background-color: #99D9D9 !important;
 }
