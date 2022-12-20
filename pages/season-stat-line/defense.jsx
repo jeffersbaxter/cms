@@ -1,7 +1,9 @@
-import { withSSRContext } from 'aws-amplify';
+import { Amplify, withSSRContext } from 'aws-amplify';
 import PlayerStats from '../../components/player-stats';
+import awsExport from '../../src/aws-exports';
 import { listPlayers } from '../../src/graphql/queries';
 
+Amplify.configure({ ...awsExport, ssr: true });
 
 const DefenseStatLines = ({ players = []}) => {
     return (
